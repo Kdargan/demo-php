@@ -1,6 +1,4 @@
 From php:7.0-apache
-run apt-get update && apt-get upgrade -y
 run docker-php-ext-install mysqli && docker-php-ext-enable mysqli
-run apt-get install vim -y
 copy index.php /var/www/html
 expose 80
