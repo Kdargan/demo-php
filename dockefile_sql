@@ -1,0 +1,10 @@
+FROM mysql:9.0.1
+
+# Environment variables to configure MySQL
+ENV MYSQL_DATABASE=mydatabase
+
+# Copy the SQL script to initialize the database and table
+COPY ./sql-scripts /docker-entrypoint-initdb.d/
+
+# Expose the MySQL port
+EXPOSE 90
