@@ -6,7 +6,7 @@ services:
             - "8001:80"
           depends_on:
             - mysql_app
-        mysql:
+        mysql_app:
           image: mysql_app:latest
           volumes:
           - db_data:/var/lib/mysql
