@@ -1,13 +1,13 @@
 version: "3.8"
 services:
         web:
-          image: "${IMAGE}"
+          image: php_app
           ports:
             - "8001:80"
           depends_on:
-            - mysql
+            - mysql_app
         mysql:
-          image: devopstrainer/java-mvn-privaterepos:mysql
+          image: mysql_app:latest
           volumes:
           - db_data:/var/lib/mysql
           environment:
@@ -15,3 +15,4 @@ services:
                 MYSQL_DATABASE: mydatabase
 volumes:
     db_data: {}
+
