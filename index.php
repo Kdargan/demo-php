@@ -4,7 +4,7 @@
 <?php
 if($_SERVER['REQUEST_METHOD'] == "POST")
 {
-$servername = "mysql";
+$servername = "mysql_app";
 $username = "root";
 $password = "password";
 $dbname = "mydatabase";
